@@ -1,0 +1,72 @@
+ <div>
+  <div class="Polaris-Layout">
+      <div class="Polaris-Layout__Section Polaris-Layout__Section--oneThird">
+        <div class="Polaris-Card">
+          <div class="Polaris-Card__Header">
+            <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+              <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                <h2 class="Polaris-Heading">Earned Points</h2>
+              </div>
+              <div class="Polaris-Stack__Item">
+                <div class="Polaris-ButtonGroup">
+                  <div class="Polaris-ButtonGroup__Item Polaris-ButtonGroup__Item--plain"> <%= link_to "Manage", customer_list_path, class: "Polaris-Button Polaris-Button--plain" %> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Polaris-Card__Section"><span class="Polaris-TextStyle--variationSubdued"><%= @rewardPoints.pluck(:earned).sum() %></span></div>
+          <div class="Polaris-Card__Section">
+            <div class="Polaris-Card__SectionHeader">
+              <h3 aria-label="Items" class="Polaris-Subheading">Discount list</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Polaris-Layout__Section Polaris-Layout__Section--oneThird">
+        <div class="Polaris-Card">
+          <div class="Polaris-Card__Header">
+            <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+              <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                <h2 class="Polaris-Heading">Used points</h2>
+              </div>
+              <div class="Polaris-Stack__Item">
+                <div class="Polaris-ButtonGroup">
+                  <div class="Polaris-ButtonGroup__Item Polaris-ButtonGroup__Item--plain"><%= link_to "Manage", items_path, class: "Polaris-Button Polaris-Button--plain" %></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Polaris-Card__Section"><span class="Polaris-TextStyle--variationSubdued"><%= @rewardPoints.pluck(:used).sum() %> </span></div>
+          <div class="Polaris-Card__Section">
+            <div class="Polaris-Card__SectionHeader">
+              <h3 aria-label="Items" class="Polaris-Subheading">Members list</h3>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="Polaris-Layout__Section Polaris-Layout__Section--oneThird">
+        <div class="Polaris-Card">
+          <div class="Polaris-Card__Header">
+            <div class="Polaris-Stack Polaris-Stack--alignmentBaseline">
+              <div class="Polaris-Stack__Item Polaris-Stack__Item--fill">
+                <h2 class="Polaris-Heading">Expired points</h2>
+              </div>
+              <div class="Polaris-Stack__Item">
+                <div class="Polaris-ButtonGroup">
+                  <div class="Polaris-ButtonGroup__Item Polaris-ButtonGroup__Item--plain"><%= link_to "Manage", items_path, class: "Polaris-Button Polaris-Button--plain" %></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Polaris-Card__Section"><span class="Polaris-TextStyle--variationSubdued"><%= @rewardPoints.pluck(:expired).sum() %></span></div>
+          <div class="Polaris-Card__Section">
+            <div class="Polaris-Card__SectionHeader">
+              <h3 aria-label="Items" class="Polaris-Subheading">Offers list</h3>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

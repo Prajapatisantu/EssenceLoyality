@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  earned: 1
+  used: 1
+  expired: 1
+
+two:
+  earned: 1
+  used: 1
+  expired: 1
